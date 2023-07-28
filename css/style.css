@@ -1,0 +1,263 @@
+/* Reset Sheet (Start) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p {
+    margin: 0; 
+    padding: 0
+}
+
+
+p {
+    line-height: 1.5;
+}
+
+img, picture, video, canvas, svg{
+    display: block;
+    max-width: 100%;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+    clip: auto !important;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    height: auto !important;
+    margin: auto !important;
+    overflow: visible !important;
+    position: static !important;
+    width: auto !important;
+    white-space: normal !important;
+}
+
+/* Reset Sheet (End) */
+
+/* This Project CSS */
+:root {
+    /* #### Text  */
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayis-blue: hsl(240, 6%, 50%);
+
+    /* #### Dividers -  */
+    --light-grayish-blue: hsl(240, 5%, 91%);
+
+    /* Background gradient: */
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+}
+
+/* html, body {
+    height: 100%;
+} */
+
+body {
+    padding: 2rem 1.5rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    border-radius: 1.25rem;
+    /* background-color: rgb(255, 131, 131); */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    width: 100%;
+    max-width: 500px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.shadow {
+    margin-top: -25%;
+    width: 70%;
+    /* background-color: rgb(247, 238, 238); */
+    z-index: 1;
+}
+
+.icon-woman {
+    width: 70%;
+    z-index: 2;
+}
+
+.question-container {
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 40% 1rem 1rem 1rem;
+    margin-top: -32%;
+    background-color: rgb(255, 255, 255);
+}
+
+.question-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.icon-woman-dekstop,
+.shadow-dekstop,
+.icon-cube {
+    display: none;
+}
+
+.arrordion-container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(217, 217, 255); */
+}
+
+.accordion-button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--very-dark-grayish-blue);
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    text-align: left;
+}
+
+/* arrow icon */
+.accordion-button img {
+    width: 0.75rem;
+}
+
+/* use in JS (classList.toggle) */
+.accordion-icon-rotate {
+    transform: rotate(180deg);
+}
+
+.accordion-button:hover {
+    color: var(--soft-red);
+}
+
+/* element which have class .accordion-button and .active, there is no space after the text "button" */
+/* use in JS (classList.toggle) */
+.accordion-button.active {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: bold;
+}
+
+.accordion-content {
+    display: none;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--dark-grayis-blue);
+    line-height: 1.5;
+    /* background-color: aqua; */
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--light-grayish-blue);
+    margin-bottom: 1rem;
+
+}
+
+@media screen and (min-width: 920px) {
+    body {
+        /* enable background cover all space */
+        min-height: 100vh;
+    }
+
+    main {
+        position: relative;
+        background-color: rgb(255, 254, 254);
+        max-width: 900px;
+    }
+
+    .container {
+        border-radius: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    
+    .icon-woman,
+    .shadow {
+        display: none;
+    }
+
+    .question-container {
+        padding: 0;
+        margin: 3rem;
+        position: relative;
+        left: 10rem;
+        top: 0;
+        width: 50%;
+    }
+
+    .icon-woman-dekstop,
+    .shadow-dekstop,
+    .icon-cube {
+        display: block;
+        position: absolute;
+    }
+
+    .icon-woman-dekstop {
+        width: calc(350/16*1rem);
+        left: -2rem;
+        top: 11rem;
+        transform: translateY(-50%);
+        
+    }
+
+    .shadow-dekstop {
+        width: calc(350/16*1rem);
+        left: calc(-208/16*1rem);
+        top: calc(-25/16*1rem);
+        transform: scale(2, 2);
+    }
+
+
+    .icon-cube {
+        width: calc(150/16*1rem);;
+        left: -4.6rem;
+        top: 9rem;
+        position: absolute;
+        z-index: 99;
+    }
+
+
+
+
+
+}
