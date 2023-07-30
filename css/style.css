@@ -79,6 +79,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* enable background cover all space */
+    min-height: 100vh;
 }
 
 main {
@@ -192,11 +194,6 @@ hr {
 }
 
 @media screen and (min-width: 920px) {
-    body {
-        /* enable background cover all space */
-        min-height: 100vh;
-    }
-
     main {
         position: relative;
         background-color: rgb(255, 254, 254);
