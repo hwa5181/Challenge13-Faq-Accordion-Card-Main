@@ -81,6 +81,7 @@ body {
     align-items: center;
     /* enable background cover all space */
     min-height: 100vh;
+    min-height: 100svh;
 }
 
 main {
